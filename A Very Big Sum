@@ -1,0 +1,23 @@
+#!/bin/python
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the aVeryBigSum function below.
+def aVeryBigSum(ar):
+    return ar
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    ar_count = int(raw_input().strip())
+
+    ar = (sum(map(int, raw_input().strip().split(' '))))
+
+    result = aVeryBigSum(ar)
+     
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
