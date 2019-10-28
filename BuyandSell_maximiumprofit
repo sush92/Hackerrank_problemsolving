@@ -49,4 +49,4 @@ def buy_sell_price(price,days):
                 sellOn=locb
     return(price[buyOn],price[sellOn])
     #print("\n Sell on = ",sellOn)
-print(sell_price(price,days))
+print(buy_sell_price(price,days))
