@@ -1,0 +1,52 @@
+##buy on 3rd day and sell on 4th day
+price=[7,12,5,3,11,6,10,2,9]
+days = [0,1,2,3,4,5,6,7,8]
+
+
+####################################
+
+
+def get_buy_day(price,days):
+    a=price[0]
+    loca=0
+    b=price[0]
+    locb=0
+    # i loop returns index of buy day
+    for i in range(0,4):
+    # j loop returns index of sell day 
+        for j in range(4,5):
+            if price[i]<a:
+                a=price[i]
+                loca=i
+                #print(loca)
+                buyOn=loca
+            elif price[j]>b:
+                b=price[j]
+                locb=j
+                sellOn=locb
+    return(days[buyOn],days[sellOn])
+    #print( "\n Buy On = ",buyOn)
+print(get_buy_day(price,days))
+
+def get_sell_day(price,days):
+    n=8
+    a=price[0]
+    loca=0
+    b=price[0]
+    locb=0
+    # i loop returns index of buy price
+    for i in range(0,4):
+    # j loop returns index of sell price
+        for j in range(4,5):
+            if price[i]<a:
+                a=price[i]
+                loca=i
+                #print(loca)
+                buyOn=loca
+            elif price[j]>b:
+                b=price[j]
+                locb=j
+                sellOn=locb
+    return(price[buyOn],price[sellOn])
+    #print("\n Sell on = ",sellOn)
+print(get_sell_day(price,days))
